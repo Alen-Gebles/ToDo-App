@@ -1,0 +1,147 @@
+:root{
+  --font-clr:rgb(190, 190, 190);
+  --border-clr:rgb(40, 36, 36);
+}
+
+body{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(28, 29, 28);
+  overflow-x: hidden;
+  font-family: Roboto;
+  margin: 0;
+}
+::placeholder{
+  color: var(--font-clr);
+}
+.box{
+  width: 500px;
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+  background-color: #34343b;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: inset 1px 1px 5px rgba(255, 255, 255, 0.261), 1px 1px 5px rgba(0, 0, 0, 0.319);
+  color: var(--font-clr);
+  margin: 40px 20px;
+}
+.container h2{
+  text-align: center;
+  margin: 0px 0px 20px 0px;
+}
+.list{
+  display: flex;
+  flex-direction: column;
+  color: var(--font-clr);
+  padding: 0;
+  margin: 0px !important;
+}
+.doneList{
+  border-top: 1px solid var(--border-clr);
+}
+.inputBox{
+  position: relative;
+}
+
+#input{
+  width: calc(100% - 48px);
+  padding: 12px 24px;
+  border: 1px solid var(--border-clr);
+  background-color: #2b2b33;
+  border-radius: 5px;
+  color: var(--font-clr);
+}
+#input:focus{
+  outline: none;
+  caret-color: var(--font-clr);
+}
+#submit{
+  padding-inline: 10px;
+  height: 100%;
+  position: absolute;
+  right: 0px;
+  top: 0%;
+  border-radius: 0px 5px 5px 0px;
+  cursor: pointer;
+  border: none;
+  border-left:1px solid var(--border-clr);
+  background-color: transparent;
+  color: var(--font-clr);
+}
+#submit:hover{
+  color: rgb(196, 196, 196);
+}
+.item{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 40px);
+  height: auto;
+  margin-bottom: 10px;
+  padding: 0px 20px;
+  transition: 150ms;
+  border-radius: 5px;
+}
+.item:hover{
+  background-color: rgba(255, 255, 255, 0.072);
+}
+.item button{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  background-size: cover;
+  cursor: pointer;
+  border: none;
+}
+.item button:nth-child(1){
+  right: 20px;
+  background-image: url('image/trash-svgrepo-com.png');
+  height: 25px;
+  width: 25px;
+}
+.pinBtn{
+  right: 50px;
+  background-image: url('image/pin-svgrepo-com.png');
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+.custom-checkbox .checkmark {
+  width: 20px;
+  height: 20px;
+  background-color: #34343b27;
+  border: 2px solid #232328bf;
+  border-radius: 4px;
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+}
+.custom-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.custom-checkbox input[type="checkbox"]:checked ~ .checkmark:after {
+  display: block;
+}
+.custom-checkbox .checkmark:after {
+  left: 7px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: 5px solid var(--font-clr);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
