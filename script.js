@@ -1,7 +1,6 @@
 const list = document.getElementById("list")
 const input = document.getElementById("input")
 const submit = document.getElementById("submit")
-const clear = document.getElementById("clear")
 const completedList = document.getElementById("completedList")
 
 function checkList(){
@@ -19,20 +18,18 @@ function checkList(){
     completedList.style.paddingLeft = "0px"
     list.appendChild(liElement)
 
-    ////////////buttons////////////////////
+              /*buttons*/
     const btnBox = document.createElement('div');
     btnBox.style.display = "flex"
     btnBox.style.flexDirection = "column"
     liElement.appendChild(btnBox)
-    /////////////////////////////////////////
 
-    //////////////////////////////////////////
     const remove = document.createElement('button');
     remove.addEventListener("click", () => {
       liElement.remove();
     })
     btnBox.appendChild(remove)
-    //////////////////////////////////////////
+    
     const pin = document.createElement('button');
     const BackgroundImageURL = "url('image/pin-svgrepo-com.png')";
     const newBackgroundImageURL = "url('image/pin-svgrepo-comgreen.png')";
@@ -45,10 +42,9 @@ function checkList(){
         list.appendChild(liElement);
         pin.style.backgroundImage = BackgroundImageURL
       }
-      
     })
     btnBox.appendChild(pin)
-    //////////////////////////////////////////
+    
     const labelBox = document.createElement("label");
     const checkBox = document.createElement("input");
     const checkSpan = document.createElement("span");
@@ -70,13 +66,12 @@ function checkList(){
         inputText.style.color = "rgb(190, 190, 190)"
       }
     })
-    //////////////////////////////////////////
+    
     const inputText = document.createElement('p')
     liElement.appendChild(inputText)
     inputText.className = 'inputP'
     inputText.textContent = inputValue;
     
-  
     input.value = ""
   }
 }
