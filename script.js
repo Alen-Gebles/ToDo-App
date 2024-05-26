@@ -3,13 +3,13 @@ const input = document.getElementById("input");
 const submit = document.getElementById("submit");
 const completedList = document.getElementById("completedList");
 
-// Function to load tasks from localStorage
+
 function loadTasks() {
   const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
   tasks.forEach(task => addTask(task.text, task.completed, task.pinned));
 }
 
-// Function to save tasks to localStorage
+
 function saveTasks() {
   const tasks = [];
   list.querySelectorAll('.item').forEach(item => {
@@ -117,7 +117,7 @@ function addTask(text, completed, pinned) {
   input.value = "";
 }
 
-// Load tasks from localStorage when the page is loaded
+
 document.addEventListener("DOMContentLoaded", loadTasks);
 
 submit.addEventListener("click", checkList);
